@@ -21,15 +21,16 @@ const ListOverview = () => {
   const [selectedList, setSelectedList] = useState(null);
 
   return (
-    <div className="list-overview list-none">
+    <div className="list-overview bg-white dark:bg-gray-800 p-4 rounded shadow text-black dark:text-white">
       <h2 className="pb-10">My Lists</h2>
       <ul>
         {lists.map((item, index) => (
-          <li className="pb-5" key={index}>
+          <li className="pb-5 border-b border-gray-200 dark:border-gray-700">
             <strong>{item.name}</strong>
           </li>
         ))}
       </ul>
+      <input type="text" placeholder="Create new list" className="mb-4" />
       <button>Create new list</button>
     </div>
   );
